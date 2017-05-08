@@ -1,0 +1,43 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+         version="2.5" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"> 
+
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>EmployeeCreation</servlet-name>
+  	<!-- <display-name>EmployeeCreation</display-name>
+  	<description></description> -->
+  	<servlet-class>servletcode.EmployeeCreation</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EmployeeRetrive</servlet-name>
+  	<!-- <display-name>EmployeeRetrive</display-name>
+  	<description></description> -->
+  	<servlet-class>servletcode.EmployeeRetrive</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EmployeeUpdateAndDelete</servlet-name>
+  	<!-- <display-name>EmployeeUpdateAndDelete</display-name>
+  	<description></description> -->
+  	<servlet-class>servletcode.EmployeeUpdateAndDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmployeeCreation</servlet-name>
+  	<url-pattern>/EmployeeCreation</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EmployeeRetrive</servlet-name>
+  	<url-pattern>/EmployeeRetrive</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EmployeeUpdateAndDelete</servlet-name>
+  	<url-pattern>/EmployeeUpdateAndDelete</url-pattern>
+  </servlet-mapping>
+   <jsp-config>
+    <taglib>
+      <taglib-uri>coretag</taglib-uri>
+      <taglib-location>tld/c.tld</taglib-location>
+    </taglib>
+  </jsp-config>
+</web-app>
