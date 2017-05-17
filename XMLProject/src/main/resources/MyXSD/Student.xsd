@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.example.org/Student/"
+	targetNamespace="http://www.example.org/Student/" xmlns:pref="http://www.example.org/Marks" xmlns:Q1="http://www.example.org/Address/">
+	<import schemaLocation="Address.xsd"
+		namespace="http://www.example.org/Address/">
+	</import>
+
+	<import schemaLocation="Marks.xsd" namespace="http://www.example.org/Marks"></import>
+	<element name="Student" type="tns:Student"></element>
+
+	<complexType name="Student">
+		<sequence>
+			<element name="studentId" type="int" maxOccurs="1"
+				minOccurs="1">
+			</element>
+			<element name="firstName" type="string" maxOccurs="1"
+				minOccurs="1">
+			</element>
+			<element name="lastName" type="string" maxOccurs="1"
+				minOccurs="1">
+			</element>
+			<element name="marks" type="pref:Marks" maxOccurs="unbounded"
+				minOccurs="1">
+			</element>
+
+			<element name="communication" type="tns:Contact"
+				maxOccurs="1" minOccurs="1">
+			</element>
+
+			<element name="Address" type="Q1:Address"></element>
+		</sequence>
+	</complexType>
+
+
+
+
+
+
+
+	<element name="Contact" type="tns:Contact"></element>
+
+	<complexType name="Contact">
+		<sequence>
+			<element name="homeNum" type="long" maxOccurs="1"
+				minOccurs="1">
+			</element>
+			<element name="emergencyNum" type="long" maxOccurs="1"
+				minOccurs="1">
+			</element>
+			<element name="alternateNum" type="long" maxOccurs="1"
+				minOccurs="0">
+			</element>
+		</sequence>
+	</complexType>
+
+
+</schema>

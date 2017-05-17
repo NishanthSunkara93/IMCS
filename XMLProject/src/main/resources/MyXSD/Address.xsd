@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/Address/" targetNamespace="http://www.example.org/Address/">
+    <element name="Address" type="tns:Address"></element>
+    
+    <complexType name="Address">
+    	<sequence>
+    		<element name="city" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="street" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="zipCode" type="long" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="country" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="type" type="tns:AddressType" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="AddressType" type="tns:AddressType"></element>
+    
+    <complexType name="AddressType">
+    	<sequence>
+    		<element name="home" type="string"></element>
+    		<element name="alternateAddress" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

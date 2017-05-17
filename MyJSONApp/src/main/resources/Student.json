@@ -1,0 +1,24 @@
+{
+  "id" : 1,
+  "firstName" : "Nishanth",
+  "lastName" : "Sunkara",
+  "marks" : [ {
+    "subjectName" : [ "JAVA", "SQL" ],
+    "marks" : [ 90, 95 ],
+    "maxMarks" : [ 100, 100 ]
+  } ],
+  "address" : [ {
+    "city" : "Irving",
+    "street" : "McArthur Blvd",
+    "country" : "USA",
+    "zipcode" : 773,
+    "addressType" : [ {
+      "home" : "ColonialGrand",
+      "alternateAddress" : null
+    } ]
+  } ],
+  "contact" : [ {
+    "homeNum" : "227926",
+    "emergencyNum" : "350245"
+  } ]
+}

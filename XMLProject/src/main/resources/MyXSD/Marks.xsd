@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Marks" xmlns:tns="http://www.example.org/Marks" elementFormDefault="qualified">
+
+    <element name="Marks" type="tns:Marks"></element>
+    
+    <complexType name="Marks">
+    	<sequence>
+    		<element name="Subject" type="string" maxOccurs="unbounded" minOccurs="1"></element>
+    		<element name="Marks" type="int" maxOccurs="unbounded" minOccurs="1"></element>
+    		<element name="MaxMarks" type="int" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>
